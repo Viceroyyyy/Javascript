@@ -46,3 +46,48 @@ let stringnum=String(num)
 
 console.log(stringnum)
 console.log(typeof stringnum)
+
+//*****************************OPERATORS********************  */
+
+//Arithmetic Operations
+
+console.table([2+2,2-2,2*2,2/2,2%2,2**2]);
+
+//Assignment Operations
+let a=8;
+console.table([a+=2,
+a-=2,
+a*=2,
+a/=2]);
+
+//Comparison Operators
+let b=2;
+if(a===b)
+    console.log("Same Datatype as well as value");
+else
+console.log("ille");
+
+b*=4;
+if(a===b)
+    console.log("Same Datatype as well as value");
+
+b=String(b);
+if(a===b)
+    console.log("Same Datatype as well as value");
+else
+    console.log("Different Datatype");
+
+// Some other comparison Operators are >,<,<=,>=,==
+
+let str1="Hello ";
+let str2="Defishhh";
+let strconcat=str1+str2;
+
+console.log(strconcat);
+
+console.log("1"+2);
+console.log(1+"2");
+console.log("1"+2+2);//In all the above three cases it will concat as string 
+
+console.log(1+2+"2");// Because here starting is with number 
+//therefore first it will add and then concat as string
