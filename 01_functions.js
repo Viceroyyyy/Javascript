@@ -58,3 +58,31 @@ console.log(calculatePrice1(200,300,400,500,600));
 // It will print an array with values[400,500,600] beacuse 200 and 300 will be taken by val1,val2
 
 
+///How to handle Ojects in a Function
+
+let obj ={
+    username:"Devesh",
+    age:"22"
+};
+
+function handleObject(obj){
+    console.log(`Username is ${obj.username} and his age is ${obj.age} `);
+}
+
+handleObject(obj);
+// We can pass the attributes of object directly also
+
+handleObject({
+    username: "Shweepy",
+    age:19
+});
+
+let arr=[200,400,500];
+
+function handleArray(array) {
+    console.log(array);
+}
+
+handleArray(arr); //Passing values through putting array in a variable
+
+handleArray([500,600,800]); //Directly passing Values 
