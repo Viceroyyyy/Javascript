@@ -54,4 +54,41 @@ console.log(dbData[1].name);
 console.log(Object.keys(obj5)); //return an array of keys
 console.log(Object.values(dbData)); //return an array of values
 
-console.log(dbData.hasOwnProperty("name"));;
+console.log(dbData.hasOwnProperty("name"));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//----------------OBJECT DESTRUCUTRING---------------------------------
+const course = {
+    coursename: "Javascript in Hindi",
+    coursefee: 999,
+    courseInstr: "Hitesh"
+};
+
+/*
+Destructuring means that we do not have to use obj.property every now and then
+ we can store it in a variable by suing curly braces 
+ */
+
+ const {coursename} = course; //Object Destructured
+ console.log(coursename);
+
+ // Also we can provide a name to destructured property
+
+ const {courseInstr: Instructor} = course;
+
+ console.log(Instructor);
+ 
+//API Format-it is present in form of objects where keys are also strings
+//but it can also be present in form of Objects present inside an array
+//Example:
+/*
+
+{
+"name": "Devesh",
+"rollno":2101641530060
+"love": "Shweepy"
+}
+
+*/
+
+// API IS PRESENT IN JSON Format
