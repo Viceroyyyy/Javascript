@@ -1,0 +1,81 @@
+
+document.getElementById("title")
+<h1 id=​"title" class=​"heading">​DOM learning on Chai aur Code​</h1>​
+document.getElementById("title").id
+'title'
+document.getElementById("title").class
+undefined
+document.getElementById("title").className
+'heading'
+document.getElementById("title").getAttribute("id")
+'title'
+document.getElementById("title").getAttribute("heading")
+null
+document.getElementById("title").getAttribute("class")
+'heading'
+document.getElementById("title").setAttribute("class","test")
+undefined
+document.getElementById("title").setAttribute("class","test heading")
+undefined 
+
+const title = document.getElementById("title")
+undefined
+
+title
+<h1 id=​"title" class=​"test heading">​DOM learning on Chai aur Code​</h1>​
+
+title.style.backgroundColor = "Blue"
+'Blue'
+
+title.style.padding = "15px"
+'15px'
+
+title.style.borderRadius = "15px"
+'15px'-->
+
+<!-- 
+title.innerHTML
+'DOM learning on Chai aur Code<span style="display: none;"> Diff btw innerText &amp; textContent &amp; innerHTML</span>'
+title.innerText
+'DOM learning on Chai aur Code'
+title.textContent
+'DOM learning on Chai aur Code Diff btw innerText & textContent & innerHTML' 
+
+****// Here inneHTML includes all the text including th HTMl tags
+****//Whereas innerText only displays the text which is divisible on th webpage i.e if any text is hidden using CSS it will not be displayed in the console
+****//Now in textContent all the text will be displayed but HTMl tags won't be displayed
+
+document.querySelector("h1")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector("h2")  ////////////Returns the first h2 element
+<h2>​Lorem ipsum dolor sit.​</h2>​
+
+document.querySelector("#title")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector(".heading")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+//NodeList and HTML collections are differentt from Arrays
+
+const test = document.querySelectorAll("li")
+test.style.color = "green"
+Gives Error
+test[0].style.color = "green"
+'green'
+
+myH2
+NodeList(3) [h2, h2, h2]0: h21: h22: h2length: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+myH2.forEach((item)=>{
+    //Shift Enter to press Enter
+    item.style.color="yellow";
+})
+undefined
+
+
+//Now HTML Collection cannot be Iterated since there is no for each loop present in it's prototype therefore we need to convert it into Arrays
+//A simpple method to convert an HTMl collection to a Array is to :
+    First : Initializze the collection in a variable
+    Second: Then use Array.from("NameofHTMLCollection")
+    Third : Iniatilaize the above step so as to use different methods such as for Each map filter etc.
+    i.e const ConvCollection = Array.from("NameofHTMLCollection")
+
