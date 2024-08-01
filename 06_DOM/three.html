@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Chai aur Code</title>
+</head>
+<body style = "background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement("div");
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random()*10+1);
+    div.setAttribute("title","Generated Title");
+    div.style.backgroundColor ="Blue";
+    div.style.color = "Yellow";
+    div.style.padding = "15px";
+
+    // Now to write Text in between the div element we can use div.innerText but innerText first fetches the value and then overwrites on it  
+    //Hence we will document.createTextNode and add that textNode to div by using div.appendChild
+    const addText = document.createTextNode("Hello! This is Tony Stark.")
+    div.appendChild(addText);
+</script>
+</html>
