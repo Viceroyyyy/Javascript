@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style =  "background-color: black;color: aqua;">
+    <ul class="language">
+        <li>Javascript</li>
+        
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(li);
+
+    }
+    addLanguage("Java");
+    addLanguage("Python");
+    addLanguage("Kotlin");
+
+    function addOptiLang(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName)); //Poora tree Is not traversed in this approach whereas in innerHTMl vaala scode entire tree is traversed
+        document.querySelector(".language").appendChild(li);
+    }
+    addOptiLang("Pandas");
+    addOptiLang("Django");
+
+    //Editing Elements
+
+    const editElement = document.querySelector("li:nth-child(2)");
+    // editElement.innerHTML = "Mojo"; //Again whole Tree is traversed in this approach
+
+    //Therefore we use:-
+    const newli = document.createElement("li");
+    newli.textContent = "Mojo";
+    editElement.replaceWith(newli);
+
+    const etel = document.querySelector("li:first-child");
+    const newel = document.createElement("li");
+    newel.textContent = "TypeScript";
+    etel.replaceWith(newel);
+
+    //edit method 2
+    const editMethod2 = document.querySelector("li:last-child");
+    editMethod2.outerHTML = `<li>C++</li>`;
+
+    //Remove Element
+    const removeElement = document.querySelector("li:nth-child(5)");
+    removeElement.remove();
+
+</script>
+</html>
