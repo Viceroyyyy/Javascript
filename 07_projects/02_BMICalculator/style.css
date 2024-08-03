@@ -23,6 +23,12 @@
     margin-top: 20px;
     color: rgb(241, 241, 241);
   }
+  #finalresult {
+    font-size: 35px;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgb(241, 241, 241);
+  }
   
   button {
     width: 150px;
