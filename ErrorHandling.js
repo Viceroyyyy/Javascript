@@ -57,3 +57,26 @@ function  addTwoNums(a,b){
 console.log("It still works")
 
 addTwoNums(5,"5");
+
+// function  addTwoNums(a,b){
+//     try{
+//         if(isNaN(a))
+//         throw new ReferenceError("the first argument is not a number");
+//         else if(isNaN(b))
+//         throw new ReferenceError("the second argument is not a number");
+//         else
+//         console.log(a+b);
+//     }
+//     catch(err){
+//         console.log("Error!",err);
+//     }
+
+// }
+// console.log("It still works")
+
+// addTwoNums(5,"5");
+
+//The aboove function will return value 55 beacuse:-
+
+// The isNaN function returns true if the value is NaN (Not-a-Number) or cannot be converted to a number. 
+
