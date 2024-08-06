@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color:#414141; color:aliceblue">
+    <h2>Amazing Events</h2>
+    <ul id="images">
+        <li><img width ="200px" id="ocean" src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" onclick="alert('Ocean')"></li>
+        <li><img width ="200px" id="mountains" src="https://images.unsplash.com/photo-1515133997814-e6460be24073?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></li>
+        <li><img width ="200px" id="sky" src="https://images.unsplash.com/photo-1450849608880-6f787542c88a?q=80&w=2842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></li>
+        <li><img width ="200px" id="river" src="https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></li>
+        <li><a id="google" style="color:aliceblue" href="https://www.google.co.in/">Google</a></li>
+    </ul>
+</body>
+<script>
+    document.getElementById("mountains").onclick = function() { //Method2 //Not Recommended Since provides less Features than eventListener
+        alert("Mountain clicked!");
+    }
+    document.getElementById("sky").addEventListener('click', function(e){
+        //type, timestamp, defaultprevented
+        //target, toElement, srcElement, currentTarget,
+        //clientX,clientY,screenX,screenY
+        //altKey,ctrlKey,shiftKey,kteyCode
+        alert("Sky clicked!");
+        console.log(e);
+    },false);
+
+    //Check below code in console
+    document.getElementById("images").addEventListener("click",function(e){
+        console.log("ul is clicked!");
+    },false)
+    document.getElementById("river").addEventListener("click",function(e){
+        console.log("River is clicked!");
+    },false);
+    //Now when clicking the river image
+    /* Output due to Event Bubbling:- 
+        River is clicked!
+        ul is clicked!
+       */
+    //Now to stop Event Bubbling We can use a property called event.stopPropagation();
+    document.getElementById("google").addEventListener("click",function(e){
+        console.log("Google is clicked!");
+        e.preventDefault();
+        e.stopPropagation();
+    });
+    /* Output due to stopping Event Bubbling:- 
+        Google is clicked!
+       */
+
+    document.querySelector("#images").addEventListener("click", function(e) {
+        console.log(e);
+        console.log(e.target)
+        console.log(e.target.parentNode);
+        if(e.target.tagName == "IMG")
+        {e.target.parentNode.remove();
+            console.log(e.target.id);
+        }
+});
+</script>
+</html>
+
+<!-- NOTES:- -->
+
+<!-- Events in Javascript does not run on sequential basis it runs when an event is performed -->
+
+<!-- 
+Three Ways to use onClick event:-
+Method1: Use it directly in the HTML tag //Not recommended since a lot of problems during website Scaling
+Method2 : Use it using onClick event in script tag //Not Recommended Since provides less Features than addEventListener
+Method3: Use it using addEventListener  
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- 
+Event Propagation is done with the help of two methods:-
+
+->Event Bubbling  (When the third parameter of an event is false(By default))
+---- Event bubbling is like for eg when we click the owl image it is inside li then it is inside ul 
+---- so if we put a console.log on id of every tag then on clicking the whichever id the next what will be printed is the one which is wrapping that id.
+---- Example explained above by clicking on the River 
+
+->Event Capturing  (When the third parameter of an event is true)
+
+-->
