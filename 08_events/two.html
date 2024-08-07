@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous Javascript</h1>
+    <button id="Stop">Stop</button>
+</body>
+<script>
+    const useSetTout = function(){
+        console.log("Print after 4 seconds by using setTimeout()");
+    }
+    const useclearTout = setTimeout(useSetTout,4000);
+
+
+    const h1 =document.querySelector('h1');
+    const changeHeading = function(){
+        h1.innerText = "Using setTimeout() Property";
+    }
+    const change = setTimeout(changeHeading,4000);
+
+    // now to clearTimeout() we can use it on EventListener or normally by just passing the change variable in th clear timeout button.
+
+    document.querySelector("#Stop").addEventListener("click", function(e){
+        clearTimeout(useclearTout);
+        console.log("Used clearTimeout() and stopped Timeout()");
+    });
+</script>
+</html>
