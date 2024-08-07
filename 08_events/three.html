@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using setInterval() and clearInterval() property </h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("Devesh");
+    // },5000);
+
+    // const sayName = function(){
+    //     console.log("Using setInterval by passing referenc in a variable");
+    // }
+    // setInterval(sayName,10000);
+
+//     const sayName = function(str){
+//         console.log(str);
+//     }
+//    const useclearInt =  setInterval(sayName,10000,"Parameter can be passed"); //Unlike setTimeout property in setInterval we can pass a parameter.
+
+//    clearInterval(useclearInt);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Using the Start Stop Buttons to use setInterval and clearInterval
+
+let strtInterval = undefined;
+document.querySelector("#start").addEventListener("click",function(e) {
+    strtInterval = setInterval(function(e){
+        console.log("Printing at intervals after clicking Start button");
+    },1000);
+});
+
+document.querySelector("#stop").addEventListener("click",function(){
+    clearInterval(strtInterval);
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+</script>
+</html>
