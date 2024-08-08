@@ -18,7 +18,7 @@
 
 ![alt text](<Screenshot 2024-08-09 at 12.04.12 AM.png>)
 
-- Fetch basically does to works : - It consists of Data:- and two arrays namely onFulfilled[](Resolve of Promise) and onRejection[](Reject of Promise).
+- Fetch basically does two works : - It consists of Data :- and two arrays namely onFulfilled[](Resolve of Promise) and onRejection[](Reject of Promise).
 - These are private fields we cannot push data directly into these arrays.
 - Second it accesses web Browser API and Node API and sends a network Request.
 - There are two possible outcomes i.e either a successful network and there's a response or there's a rejection.
