@@ -1,0 +1,44 @@
+<!-- Conventional Method for API request...i.e how we used to do it before Fetch....Using AJAX -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style ="background-color: #212121; color:aliceblue;">
+    <!-- 
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+ -->
+
+</body>
+<script>
+    const requestURL = "https://api.github.com/users/Viceroyyyy"
+    const xhr = new XMLHttpRequest(); //Creating new Object of XMLHttpRequest
+    xhr.open('GET',requestURL);  //Syntax:- xhr.open("Methods such as GET and POST","URL in string format")
+    xhr.onreadystatechange = function (){ //This function is executed everytime there's an change in the State
+        console.log(xhr.readyState);
+        if(xhr.readyState == 4)
+        {   const resTxt = JSON.parse(this.responseText); //Converts the ans to Object and then we can easily access each object
+            console.log(typeof resTxt);
+            console.log(resTxt.followers); //This is will result in Undefined since resTxt.followers is String not Object
+        }
+    }
+    xhr.send(); //To call the xhr.open function
+
+
+
+    //github.com/v8/v8 ----Javascript V8 Engine
+    //V8 engine is written in  C++ language(Entire JAvascript)
+    //Open the link -> Go to src
+    //                -> Move to d8
+    //                -> MOve to d8 console
+    //                ->Go to writetoFile
+
+</script>
+</html>
