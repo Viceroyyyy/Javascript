@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React";
+            this.server = "https://localhost:3000"
+
+            document.querySelector("button").addEventListener("click",this.handleClick.bind(this));
+        }
+        //Notice here if bind is not used on button click only handleClick will be used and the this keyword of Handlequick will only  be used
+        //Therefore if we have to use everyt property of React class then we have to .bind(this).
+
+        handleClick(){
+            console.log("Button Clicked!!");
+            console.log(this);
+            console.log(this.server);
+
+        }
+    }
+
+    const app = new React();
+
+</script>
+</html>
