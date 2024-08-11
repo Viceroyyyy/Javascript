@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Property</title>
+    <style>
+        a {
+            color:aliceblue
+        }
+    </style>
+</head>
+<h1>DefaultPrevented property of Events</h1>
+<body style="background-color: #414141; color:aliceblue">
+    <p><a id="link1" href="#link1">Visit link 1</a></p>
+<p><a id="link2" href="#link2">Try to visit link 2</a> (you can't)</p>
+<p id="log"></p>
+
+<h1>TimeStamp Property of Events</h1>
+<p>
+    Focus this iframe and press any key to get the current timestamp for the
+    keypress event.
+  </p>
+  <p>timeStamp: <span id="time">-</span></p>
+</body>
+<script>
+    //for deafultPrevented
+
+const a = document.getElementById("link2");
+a.addEventListener("click", function (event) {
+  event.preventDefault();
+});
+document.addEventListener("click", function (event) {
+  const log = document.getElementById("log");
+    log.innerText = event.defaultPrevented ? `Sorry, but you cannot visit this link!\n` : `Visiting link…\n`;
+});
+
+//For TimeStamp Property
+
+document.addEventListener("keypress",function(event) {
+    const time=document.querySelector("#time");
+
+    time.innerText = Math.round(event.timeStamp/1000);
+});
+
+
+
+</script>
+</html>

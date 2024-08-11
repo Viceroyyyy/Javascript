@@ -26,3 +26,6 @@ Object literal
 - Inheritance
 - Polymorphism 
 
+- Javascript Deafault Behiaviour - Prototypal i.e JAvascript doesn't quit if you're trying to find something and JS is not able to find it will search for it on that level go one level up and keeps on going until it finds the value or Null
+ 
+ ![alt text](<Screenshot 2024-08-10 at 10.38.47 PM.png>)
