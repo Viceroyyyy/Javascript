@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Closure</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;"> 
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+</body>
+<script>
+    function outer(){
+        const username = "Devesh"
+        function inner(){
+            console.log("Inner: ",username);//This will be printed since username will be accessed from the outer function
+        }
+        inner();
+    }
+    outer();
+    //console.log("Outer: ",username); //This will give Uncaught Reference Error since username is not defined 
+
+    function makeFunc() {
+    const name = "Mozilla";
+     function displayName() {
+         console.log(name);
+        }
+  return displayName;
+    }
+    //return displayname- since it is passing the function therefore due to lexical scoping entire lexical scope of outer function will be passed as the inner function which is passed is accessing the variable from outer function
+    const myFunc = makeFunc();
+    myFunc();
+</script>
+<script>
+    //Practical Usage of Closure 
+    //Let's create two buttons and onclicking them the colour changes according to the button label
+
+    //One method is we cahnge the colour individually but what if we are provided with a 500 colours then we cannot do it one bye one by creating a unique command for every color
+
+    // document.querySelector('#green').onclick = function() {
+    //     document.body.style.backgroundColor = 'green';
+    // }
+    // document.querySelector('#orange').onclick = function() {
+    //     document.body.style.backgroundColor = 'orange';
+    // }
+
+    //Next method is to create a  closure
+
+    function clickHandler(color){
+        return function(){ //Here color can be accessed directly because of the lexical scoping
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+    //Now here we can apply loop for all 500 colours if you want 
+    document.getElementById('green').onclick = clickHandler("green");
+    document.getElementById('orange').onclick = clickHandler("orange");
+
+
+</script>
+</html>
+
+<!-- If a function is inside a function then the inner function or functions will get access of all the variables declared inside the outer variable. This is called Lexical Scoping. -->
+
+
+<!-- 
+- A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+In simple words a closure gives you access to the outer function's scope from an inner function
+In JS a closure is created everytime a function is created, at functionn creation time.
+
+-->
