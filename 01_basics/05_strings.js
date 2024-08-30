@@ -30,7 +30,7 @@ console.log(newstr.charAt(2));
 console.log(newstr.indexOf("v"));
 console.log(newstr.toUpperCase()); 
 console.log(newstr.length); 
- const usingsubstr = newstr.substring(0,4);//Negatuve values are ignored
+ const usingsubstr = newstr.substring(0,4);//Negative values are ignored
 console.log(usingsubstr);
  const usingslice = newstr.slice(-7,4); //It can start from another end if we give negative value
  console.log(usingslice);
@@ -47,3 +47,19 @@ const rplc = "https://eee245$%"
 
 console.log(rplc.replace("5$","h5"));
 console.log(rplc.split("/"));
+
+// Using normal Method:-
+// Hi! My name is Devesh and i am a Male
+// Using String Interpolation
+// Hi! My name is Devesh and i am a Male
+// v
+// 2
+// DEVESH
+// 6
+// Deve
+// Deve
+// Debesh
+// Debesh   
+//   Debesh
+// https://eee24h5%
+// [ 'https:', '', 'eee245$%' ]
