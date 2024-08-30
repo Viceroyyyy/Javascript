@@ -1,7 +1,7 @@
 "use strict"; //Treats all the code as the newer version of JS
 
 // alert(3+3) // This is used when we are using Javascript using Browser
-//Gives a pop in the form of Dialog Box
+//Gives a pop up in the form of Dialog Box
 
 //Datatypes
 /*
