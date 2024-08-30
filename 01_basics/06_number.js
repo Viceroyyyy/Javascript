@@ -12,10 +12,10 @@ console.log(balance.toFixed(4));//Used to round up upto the number of decimal pl
 
 const newnnum = 123.8366;
 console.log(newnnum.toPrecision(3)); //Gives preference to values before decimal
- 
+ //What it does is it rounds of the value based on the number of digits for which precision is asked for. Therefore for above example only 123 is considered since it starts from leftmost digit and it is rounded of to 124 since 0.8366 is more than 0.5. 
 const newnnum1 = 1234.8366;
 console.log(newnnum1.toPrecision(3));
-//Takes first three values only
+//Takes first three values only and rest all is hown in exponential format
 
 const hundreds = 100000;
 console.log(hundreds.toLocaleString()); //Puts commas in american Standard
@@ -43,5 +43,5 @@ console.log(Math.floor((Math.random()*10)+1));
 
 const max=30;
 const min=15;
-//Formula so that we can get atleast minimum value
+//Formula so that we can get any random number between a given range:-
 console.log(Math.floor(Math.random()*(max-min+1))+min);
