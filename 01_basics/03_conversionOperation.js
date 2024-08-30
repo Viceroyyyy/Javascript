@@ -11,7 +11,7 @@ console.log(score)
 
 let score1 = "33abc"
 
-console.log(typeof score)
+console.log(typeof score1)
 
 let valueInnumber1= Number(score1) // data type must be started with Capitsl Letter
 
