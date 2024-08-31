@@ -22,13 +22,16 @@ console.log(typeof bigNum);
     name: "Devesh",
     Age: 22
  }
+ console.log(typeof heroes);
+ console.log(typeof persDetails);
+ 
 
-//Declaring a functions as in variable
+//Declaring a functions in variable
 
 const myfunc = function(){
     console.log("Hello world!");
 };
-console.log(myfunc());
+console.log(typeof myfunc());
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
