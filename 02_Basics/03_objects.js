@@ -24,11 +24,11 @@ console.log(Obj.LastLogindays);
 
 console.log(Obj["email"])
 //THE BIGGEST ADVANTTAGE OF ACCESSING IN THIS WAY IS:-
-//IF YOU WANT TO ACCESS AN OBJECT LITERAL WHICH DECLARED LIKE "OBJECT" : "HELLO"
-//In above case we cannnot access this literal through maethod 1 
+//IF YOU WANT TO ACCESS AN OBJECT LITERAL WHICH IS DECLARED LIKE A STRING i.e "OBJECT" : "HELLO"
+//In above case we cannnot access this literal through method 1 
 //Hence we have to use Method2
 
-//Also WHEN WE DECLARE A SYMBOL the coorect way to acess it is using METHOD 2
+//Also WHEN WE DECLARE A SYMBOL the correct way to access it is using METHOD 2
 console.log(Obj[mysym]);
 
 //To update values
