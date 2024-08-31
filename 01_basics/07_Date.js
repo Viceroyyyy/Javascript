@@ -19,7 +19,7 @@ console.log(myCreatedDate.toLocaleString()); //7/26/2024, 12:00:00 AM
 let myCreatedDate1 = new Date(2024, 6,26,7,21);
 console.log(myCreatedDate1.toLocaleString()); //7/26/2024, 7:21:00 AM
 
-//Indexing of Months start from 0 when we write in single digit
+//Indexing of Months start from 0 when we write month in single digit
 //If we Use MM DD YY format then indexing start from 1
 
 let myCreatedDate2 = new Date("00-21-2024"); //MM DD YY format but invalid since index starts from 1
