@@ -11,6 +11,7 @@ let strnewarr = ["Defishhh","Shweepy"]
 //if we try to concat another array to the present array then all the elements of new array is added to older array
 console.log(strarr.concat(strnewarr));
 //output-->[ 'Devesh', 'Swamy', 'Defishhh', 'Shweepy' ]
+console.log(arr.concat(newarr)); //This will add every element of new arr into arr without converting it into a string
 
 //Another solution is to use SPREAD OPERATOR
 //Just like when a glass is dropped it shatters and spreads similarly SPREAD OPERATOR spreads the elemnts of the array
