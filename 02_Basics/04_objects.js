@@ -1,11 +1,12 @@
 //Declaring Singleton object
-const singletonObj = new Object(); //Creates an empty Singleton Object
+const singletonObj = new Object(); //Creates an empty Singleton Object, used where we require a single entity for example WhatsappUser etc.
 
 const newObj = {};//Does not create a Singleton Object
 
+//Both Singleton and Non-Singleton Objects work exactly same there is no difference.
 console.log(singletonObj);
 
-//Nesting Objedts i.e adding objects inside objects
+//Nesting Objects i.e adding objects inside objects
 
 const nestObj = {
     id: 210046,
@@ -36,14 +37,15 @@ let obj2 = {
 const obj3 = {obj1,obj2};
 console.log(obj3); //Output=> { obj1: { '1': 'a', '2': 'b' }, obj2: { '3': 'c', '4': 'd' } }
 
-const obj4=Object.assign({},obj1,obj2); //Syntax => Object.assign(Target,Value)---->all the values are put inside The target 
+const obj4=Object.assign({},obj1,obj2); //Syntax => Object.assign(Target,Value)---->all the values are put inside The target...Here the empy paranthesis acts as the target and all others objects are the values  whose properties are copied to the empty paranthesis.
+//If we don't use the empty paranthesis then all the properties of the Objects will be copied inside the Obj1 
 
 console.log(obj4);
-const obj5 = {...obj1,...obj4};
+const obj5 = {...obj1,...obj4}; //USing Spread Operator again to copy objects properties into another Object.
 console.log(obj5);
 
-//Now whenever we take values from a Database it is received in th form of array of Objects
 
+//Now whenever we take values from a Database it is received in the form of array of Objects i.e:-
 const dbData = [
     { id: 1,name: 'a'},
     { id: 2, name: 'b' },
@@ -90,5 +92,6 @@ Destructuring means that we do not have to use obj.property every now and then
 }
 
 */
+
 
 // API IS PRESENT IN JSON Format
