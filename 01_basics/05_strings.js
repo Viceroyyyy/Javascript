@@ -25,6 +25,9 @@ length: 6
 [[PrimitiveValue]]: "Devesh"
 
 */
+console.log(gender.charAt(2));
+console.log(gender.indexOf("l"));
+console.log(gender.toUpperCase());
 
 console.log(newstr.charAt(2));
 console.log(newstr.indexOf("v"));
