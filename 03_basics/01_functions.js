@@ -4,16 +4,16 @@ function addTwoNumbers(number1, number2) {
     console.log(number1+number2);
 }
 
-//No datatype of number is provided in JS in parameters
+//No datatype is provided in JS for parameters it is dynamically alotted
 
 // Function Calling
 
-addTwoNumbers(3,4);  //8
+addTwoNumbers(3,4);  //7
 addTwoNumbers(3,"4"); //34
 addTwoNumbers(3,"a");  //3a
 addTwoNumbers(3,null);  //3
 
-// While calling the function the values passed are called Arguements
+// While calling the function the values passed are called Arguments
 
 //WE can store functions in variable in Javascript
 
