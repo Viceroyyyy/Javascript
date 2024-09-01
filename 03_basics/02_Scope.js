@@ -13,7 +13,7 @@ console.log(b); //20 since it takes value declared globally
 console.log(c); // 30 because it changes value irrespective of the scope 
 
 //var is declared locally can also be used globally for example:-
-//Cooment above code for below example
+//Comment entire code above for below example:
 if(true){
     let a=1000;
     const b=50;
@@ -52,10 +52,12 @@ function addOne(num){
 
 addOne(5);
 
+x=5;
+console.log(x);
+let x;
+//Method 2 Declaring function in a Variable(Function expression)
 
-//Method 2 Declaring function in a Variable
-
-variable(8);//Throws errpr because variable is cannot be used before initialization
+// variable(8);//Throws errpr because variable cannot be used before initialization
 //ReferenceError: Cannot access 'variable' before initialization
 
 
@@ -67,7 +69,7 @@ let variable = function add(num){
  variable(8);
  add(9); //Throws error because we cannot acces the function declared in a variable directly
 
- //console.log(variable = 8);
+//  console.log(variable = 8);
 
 
 
