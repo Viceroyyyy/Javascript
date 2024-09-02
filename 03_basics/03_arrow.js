@@ -24,7 +24,7 @@ function thiskeyword(){
 }
 thiskeyword(); //Here in function it will give a lot of values 
 
-/////ALSOOO THIS DOES NOT WORK IN FUNCTION IT ONLY WORKS IN OBJECTS
+/////ALSOOO THIS DOES NOT WORK IN FUNCTION IT ONLY WORKS IN OBJECT 
 
 function chai(){
     let username="Devesh";
@@ -46,11 +46,15 @@ const addThree = (num1,num2,num3) => num1+num2+num3;
 console.log(addThree(5,6,4));
 
 //Can also be used by using providing a round bracket
-const addThree1 = (num1,num2,num3) => (num1+num2+num3);
+const addThree1 = (num1,num2,num3) => (
+    num1+num2+num3
+);
 //Round Bracket is also used when we have to use objects in arrow functions
 const printuserName1 = () => {username:"Swamy"};
 console.log(printuserName1()); //Returns Undefined
-const printuserName = () =>({username:"Swamy"});
+const printuserName = () =>(
+    {username:"Swamy"}
+);
 console.log(printuserName());
 
 
