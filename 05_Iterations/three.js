@@ -2,11 +2,11 @@
 //Used to iterate easily over arrays objects etc
 
 let arr= [1,2,3,4,5,6,7];
-for (const index of arr) {
-    console.log(`the value is ${index}`);
+for (const value of arr) {
+    console.log(`the value is ${value}`);
 }
 
-//above loop runs exactly same as ForEach Loop
+//above loop runs exactly same as ForEach Loop of Java
 
 const str = "Devesh Agnihotri";
 for (const st of str) {
@@ -36,7 +36,7 @@ let myobj = {
     "game1" : "IGI",
     "game2" : "NFS"
 }
-//Not the code written below will give error
+//Note the code written below will give error
 for(const [key, value] of myobj) {
     console.log(key,":",value);
 }
