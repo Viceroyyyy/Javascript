@@ -41,3 +41,10 @@ const userBooks1 = books.filter((bk)=>bk.publish > 2000);
 
 console.log(userBooks1);
 
+const nums = [0,10,20,30,40,50];
+
+console.log(nums.filter( function(num) {
+    return num > 20;
+}));
+//output
+// [30,40,50]
