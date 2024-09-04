@@ -14,7 +14,7 @@ console.log(result);
 //Since forEach does not return any values and always return undefined value,
 //Hence we use filter as it returns the value which follows the given condition
 
-//To conver the above code in forEach loop 
+//To convert the above code in forEach loop 
 
 const newNums=[];
 mynums.forEach((nums) => {
