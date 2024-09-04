@@ -1,6 +1,6 @@
 //Using Reduce on arrays 
 //Reduce on arrays generally consist of two things i.e the Accumulator and the Current Value 
-//Accu,ulator is used for storing the Addded Value or operated value at any instance
+//Accumulator is used for storing the Addded Value or operated value at any instance
 //Whereas Current Value is used for current instance of the array
 
 
